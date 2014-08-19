@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Binary Search Trees</title>
+    <script src="bst.js"></script>
+    <script>
+        var nums = new BST();
+        console.log("Inserting 23 into tree...");
+        nums.insert(23);
+        console.log("Inserting 45 into tree...");
+        nums.insert(45);
+        console.log("Inserting 16 into tree...");
+        nums.insert(16);
+        console.log("Inserting 37 into tree...");
+        nums.insert(37);
+        console.log("Inserting 3 into tree...");
+        nums.insert(3);
+        console.log("Inserting 99 into tree...");
+        nums.insert(99);
+        console.log("Inserting 22 into tree...");
+        nums.insert(22);
+        console.log("Inorder traversal: ");
+        inOrderDisplay(nums.root);
+        preOrderDisplay(nums.root);
+        postOrderDisplay(nums.root);
+
+        console.log("Max: "+getMax(nums));
+        console.log("Min: "+getMin(nums));
+
+        console.log(findValue(nums,37));
+        console.log(findValue(nums,40));
+
+
+         var newtree = new BST();
+         newtree.root = new Node(2,1,3);
+         inOrderDisplay(newtree.root);
+
+        newtree.insert(4);
+        newtree.insert(5);
+        inOrderDisplay(newtree.root);
+        console.log(newtree.root);
+
+       /* var invalidtree = new BST();
+         invalidtree.root = new Node(3,6,1);*/
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
